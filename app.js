@@ -11,7 +11,7 @@ const populate = async (value, currency)=>{
         myStr += `<tr>
                     <td>${key}</td>
                     <td>${rJson["data"][key]["code"]}</td>
-                    <td>${Math.round(rJson["data"][key]["value"] * value)}</td>
+                    <td>${(rJson["data"][key]["value"] * value).toFixed(2)}</td>
                 </tr>
             `
     } 
